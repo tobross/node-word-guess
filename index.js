@@ -126,7 +126,12 @@ function gameEnd() {
         again();
     }
     else if (blanksFilled === currentWord.letters.length) {
+        win++;
         console.log("CONGRATULATIONS! You guessed the word!");
+        console.log(deco +"The word was " + rando + "!" + deco);
+        console.log("Current Wins: "+win);
+        console.log("Current Losses: "+lose+deco+"\n");
+
         again();
     } 
     else {
@@ -151,7 +156,7 @@ function again() {
             start();
         }
         else {
-            console.log("Very well... Good bye!");
+            console.log("Very well... Good bye, "+"!");
             return;
         }
     });
