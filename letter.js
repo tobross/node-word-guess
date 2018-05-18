@@ -1,7 +1,7 @@
 // constructs each individual letter as either a visible guessed letter or a blank space.
 
-var Letter = function(character) {
-    this.character = toUpperCase();
+var letter = function(character) {
+    this.character = character.toUpperCase();
     this.guessedLetter = false;
     this.showLetter = function() {
         if (this.guessedLetter) {
@@ -14,4 +14,4 @@ var Letter = function(character) {
 }
 
 // make this constructor visible to other files by exporting contents and expecting an import command to create the link.
-module.exports = Letter
+module.exports = letter
